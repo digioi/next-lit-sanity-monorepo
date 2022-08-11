@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+
 import { CounterButton } from '../components/designSystem'
 import styles from '../styles/Home.module.css'
 
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <CounterButton count={44} />
+        <my-element></my-element>
       </main>
         
     </div>

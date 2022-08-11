@@ -1,5 +1,5 @@
 import { createComponent } from "@lit-labs/react";
-import { MyElement } from "aps-org-components";
+import { MyElement } from "repo-components";
 import * as React from "react";
 
 export const CounterButton = createComponent(
