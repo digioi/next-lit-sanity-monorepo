@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <CounterButton count={3} />
+        <CounterButton count={3}/>
       </main>
         
     </div>

@@ -5,8 +5,7 @@
 import lazy from "next/dynamic"
 
 // Using this will work great but no SSR :(
-export const CounterButton = lazy(() => import("./CounterButton.client"), { ssr: false });
+// export const CounterButton = lazy(() => import("./CounterButton.client"), { ssr: false });
 // Below breaks typing, but will render the text as stated on the request.
-// export const CounterButton = lazy(() => import("./CounterButton")
-//   .then((module) => (typeof window === 'undefined' ? module.default.server() : module.default.client())),
-//   { ssr: true });
+// @ts-ignore -- TODO: Fix this
+export const CounterButton = lazy(() => typeof window === 'undefined' ? import("./CounterButton.server") : import("./CounterButton.client"), { ssr: true });
